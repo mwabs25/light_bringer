@@ -53,10 +53,6 @@ echo Selamat datang $nick ":)"
 get_url=$(curl -s http://zlucifer.com/api/nik.php)
 cek='curl -s '$get_url # check status
 response=`curl -s -o /dev/null -w "%{http_code}" $cek`
-if [[ $response != *HACKER* ]]; then
-    echo
-    echo "Website Offline/Restart untuk sementara"
-    echo "Silahkan coba lagi"
 else
     echo
     echo "Masukan angka 1 untuk tips, dan 2 untuk melakukan pengecekan"
